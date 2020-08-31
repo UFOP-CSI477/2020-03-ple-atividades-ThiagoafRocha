@@ -1,12 +1,84 @@
-.img-carousel{
-    height: 35em;
-}
-
-.img-perfil{
-    width: 10em;
-    height: 12em;
-}
-
 #titulo-index{
    text-align: center;
+   margin: auto;
+   margin-top: 1em;
+   margin-bottom: 1em;
+   font-family: Arial, Helvetica, sans-serif ;
+   text-transform: uppercase;
+   
+}
+
+.conteudo{
+    background-color: 	#DCDCDC;
+    border: 2px solid #4169E1;
+    border-radius: 10px;
+    padding: 1em 3em;
+    margin: 0.5em 5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  	#C0C0C0;
+    border-radius: 5px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    background-color:  	#4169E1;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: 	#0000FF;
+  }
+
+  .botao-sair{
+      background-color: #B22222;
+      border-radius: 5px;
+  }
+
+  .p-botao{
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .u-botao{
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  
+h3 {
+    text-decoration: underline;
+  }
+
+#subtop1{
+    float: left;
+    background-color:dimgrey;
+    border-radius: 10px;
+    margin-left: 5em;
+    padding: 2em;
+    color: #FFF;
+}
+
+#subtop2{
+    float: right;
+    background-color: dimgray;
+    border-radius: 10px;
+    margin-right: 5em;
+    padding: 2em;
+    color: #FFF;
+}
+
+.aux{
+    clear: both;
 }
