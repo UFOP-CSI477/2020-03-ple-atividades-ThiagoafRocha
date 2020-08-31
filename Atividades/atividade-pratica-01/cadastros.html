@@ -1,84 +1,61 @@
-<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Cadastros</title>
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="perfil.html">Perfil</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="cadastros.html">Cadastros<span class="sr-only">(current)</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="lancamentos.html">Lançamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="relatorios.html">Relatórios</a>
-                </li>
-            </ul>
-        </div>
-        <a class="nav-item btn btn-danger">Sair</a>
-        </div>
+    <nav>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="cadastros.html">Cadastros</a></li>
+            <li><a href="lancamentos.html">Lançamentos</a></li>
+            <li><a href="relatorios.html">Relatórios</a></li>
+        </ul>
+        <a href="#">Sair</a>
     </nav>
 </header>
 
 <body>
-    <div class="container">
-        <h1 id="titulo-index">Cadastro</h1>
-        <form>
-            <div class="form-group">
-              <label for="formGroupExampleInput">Nome completo</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira o nome completo">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Numero de CPF</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Numero de CPF">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Data de nascimento</label>
-                <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Endereço completo</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira o endereço completo">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Número de telefone</label>
-                <input type="tel" class="form-control" id="formGroupExampleInput2" placeholder="Insira número de telefone">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">E-mail</label>
-                <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Insira seu e-mail">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Nome de usuário</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Senha</label>
-                <input type="password" class="form-control" id="formGroupExampleInput" placeholder="">
-            </div>
+    <h1>Cadastro</h1>
+    <form>
+        <div>
+            <label for="campo-nome">Nome completo</label>
+            <input type="text" id="campo-nome" placeholder="Insira o nome completo">
+        </div>
+        <div>
+            <label for="campo-cpf">Numero de CPF</label>
+            <input type="text" id="campo-cpf" placeholder="Numero de CPF">
+        </div>
+        <div>
+            <label for="campo-data">Data de nascimento</label>
+            <input type="date" id="campo-data" placeholder="">
+        </div>
+        <div>
+            <label for="campo-endereco">Endereço completo</label>
+            <input type="text" id="campo-endereco" placeholder="Insira o endereço completo">
+        </div>
+        <div>
+            <label for="campo-tel">Número de telefone</label>
+            <input type="tel" id="campo-tel" placeholder="Insira número de telefone">
+        </div>
+        <div>
+            <label for="campo-email">E-mail</label>
+            <input type="email" id="campo-email" placeholder="Insira seu e-mail">
+        </div>
+        <div>
+            <label for="campo-nome-usuario">Nome de usuário</label>
+            <input type="text" id="campo-nome-usuario" placeholder="">
+        </div>
+        <div>
+            <label for="campo-senha">Senha</label>
+            <input type="password" id="campo-senha" placeholder="">
+        </div>
 
-            <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
-          </form>
-    </div>
+        <button type="submit" class="btn btn-primary mb-3">Cadastrar</button>
+        </form>
 </body>
 
 <footer>
