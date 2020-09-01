@@ -12,7 +12,7 @@
     background-color: 	#DCDCDC;
     border: 2px solid #4169E1;
     border-radius: 10px;
-    padding: 1em 3em;
+    padding: 1em 3em 2em 3em;
     margin: 0.5em 5em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -26,35 +26,35 @@ ul {
     border-radius: 5px;
   }
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    background-color:  	#4169E1;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+li {
+  float: left;
+}
 
-  li a:hover {
-    background-color: 	#0000FF;
-  }
+li a {
+  background-color:  	#4169E1;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-  .botao-sair{
-      background-color: #B22222;
-      border-radius: 5px;
-  }
+li a:hover {
+  background-color: 	#0000FF;
+}
 
-  .p-botao{
-    border-radius: 10px 0px 0px 10px;
-  }
+.botao-sair{
+    background-color: #B22222;
+    border-radius: 5px;
+}
 
-  .u-botao{
-    border-radius: 0px 10px 10px 0px;
-  }
+.p-botao{
+  border-radius: 10px 0px 0px 10px;
+}
+
+.u-botao{
+  border-radius: 0px 10px 10px 0px;
+}
 
   
 h3 {
@@ -81,4 +81,79 @@ h3 {
 
 .aux{
     clear: both;
+}
+
+#img-perfil{
+  float: left;
+  width: 13%;
+  height: 25%;
+  margin-right: 1em;
+  border-radius: 100px;
+  border: 5px solid blue;
+}
+
+input{
+  width: 100%;
+  padding: 1em;
+  border: 2px solid blue;
+  margin-bottom: 0.5em;
+}
+
+.form-genero input{
+  width: auto;
+}
+.form-genero{
+  margin: 1em;
+  float: left;
+}
+
+.form-data input{
+  width: auto;
+}
+
+.form-data{
+  float: left;
+  padding: 4em 0em 0em 4em
+}
+
+.form-endereco{
+  clear: both;
+}
+
+.botao-cad {
+  background-color: #4CAF50;
+  border: none;
+  color: #FFF;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.botao-res {
+  background-color: orange;
+  border: none;
+  color: #FFF;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #FFF;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 1em;
+  text-align: left;
 }

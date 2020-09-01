@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastros</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="p-botao">Home</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="cadastros.html">Cadastros</a></li>
+                <li><a href="lancamentos.html">Lançamentos</a></li>
+                <li><a href="relatorios.html" class="u-botao">Relatórios</a></li>
+                <li style="float: right;"><a href="#" class="botao-sair">Sair</a></li>
+            </ul>  
+        </nav>
+    </header>
+
+    <div class="conteudo">
+        <h1>Cadastro</h1>
+        <form>
+            <div>
+                <label for="campo-nome">Nome completo</label>
+                <input type="text" id="campo-nome" placeholder="Insira o nome completo">
+            </div>
+            <div>
+                <label for="campo-cpf">Numero de CPF</label>
+                <input type="text" id="campo-cpf" placeholder="Numero de CPF">
+            </div>
+            <div class="form-genero">
+                <label for="campo-data">Gênero</label><br>
+                <input type="radio" id="radio-masc" name="genero">
+                <label for="radio-masc">Masculino</label><br>
+                <input type="radio" id="radio-fem" name="genero">
+                <label for="radio-fem">Feminino</label><br>
+                <input type="radio" id="radio-trans" name="genero">
+                <label for="radio-trans">Transgênero</label><br>
+                <input type="radio" id="radio-nb" name="genero">
+                <label for="radio-nb">Não Binário</label><br>
+                <input type="radio" id="radio-outro" name="genero">
+                <label for="radio-outro">Outros</label><br>
+            </div>
+            <div class="form-data">
+                <label for="campo-data">Data de nascimento</label>
+                <input type="date" id="campo-data" placeholder="">
+            </div>
+            <div class="form-endereco">
+                <label for="campo-endereco">Endereço completo</label>
+                <input type="text" id="campo-endereco" placeholder="Insira o endereço completo">
+            </div>
+            <div>
+                <label for="campo-tel">Número de telefone</label>
+                <input type="tel" id="campo-tel" placeholder="Insira número de telefone">
+            </div>
+            <div>
+                <label for="campo-email">E-mail</label>
+                <input type="email" id="campo-email" placeholder="Insira seu e-mail">
+            </div>
+            <div>
+                <label for="campo-nome-usuario">Nome de usuário</label>
+                <input type="text" id="campo-nome-usuario" placeholder="">
+            </div>
+            <div>
+                <label for="campo-senha">Senha</label>
+                <input type="password" id="campo-senha" placeholder="">
+            </div>
+
+            <button type="submit" class="botao-cad">Cadastrar</button>
+            <button type="reset" class="botao-res">Resetar</button>
+        </form>
+    </div>
+    <footer>
+
+    </footer>       
+</body>
+
+
+</html>
