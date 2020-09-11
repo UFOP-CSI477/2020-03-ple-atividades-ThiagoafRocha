@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <style>
+        #contador{
+            padding: 4em;
+            background-color: brown;
+            justify-content: center;
+            color: azure;
+            border-radius: 20px;
+            margin-left: 1.2em;
+            
+        }
+        .flex-container {
+            display: flex;
+            }
+
+        .flex-container > div {
+            margin: 9px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+    </style>
+
+    <script>
+
+        let contador;
+        let id;
+        let executando = false;
+
+        function processo(){
+            if(!contador){
+                contador = document.formCount.count.value;
+            }
+            document.getElementById("contador").innerHTML = `${contador}`;
+            contador--;
+
+        }
+
+        function iniciar(){
+            if (!executando){
+                id = setInterval(processo, 1000);
+                executando = true;
+            }
+        }
+
+        function parar(){
+            clearInterval(id);
+            executando = false;
+        }
+
+        function reiniciar(){
+            parar();
+            contador = 1;
+            document.getElementById("contador").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cronômetro</h1>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-9">
+            <form action="" name="formCount">
+                <label for="count">Tempo: </label>
+                <input type="text" name="count" id="count">
+            </form>
+            </div>
+        </div>
+        <div class="row flex-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div id="contador">
+
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="botoes">
+                <input type="button" value="Iniciar" onclick="iniciar()" class="btn btn-success">
+                <input type="button" value="Parar" onclick="parar()" class="btn btn-danger">
+                <input type="button" value="Reiniciar" onclick="reiniciar()" class="btn btn-warning">
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
