@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <script>
+        function Pessoa (nome, sobrenome, idade, datanasc, genero){
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            this.idade = idade;
+            this.datanasc = datanasc;
+            this.genero = genero;
+        }
+
+        function exibirDados(){
+            const nome = window.prompt("Insira o nome:");
+            const sobrenome = window.prompt("Insira o sobrenome:");
+            const idade = window.prompt("Insira a idade:");
+            const datanasc = window.prompt("Insira a data de nascimento");
+            const genero = window.prompt("Insira o gênero");
+
+            const pessoa = new Pessoa(nome, sobrenome, idade, datanasc, genero);
+
+            document.getElementById("nome").innerHTML = pessoa.nome;
+            document.getElementById("sobrenome").innerHTML = pessoa.sobrenome;
+            document.getElementById("idade").innerHTML = pessoa.idade;
+            document.getElementById("datanasc").innerHTML = pessoa.datanasc;
+            document.getElementById("genero").innerHTML = pessoa.genero;
+        }
+    </script>
+</head>
+<body>
+    <h1>Dados Pessoais</h1>
+    <label>Nome: </label><div id="nome"></div>
+    <label>Sobrenome: </label><div id="sobrenome"></div>
+    <label>Idade: </label><div id="idade"></div>
+    <label>Data de Nascimento: </label><div id="datanasc"></div>
+    <label>Gênero: </label><div id="genero"></div>
+    <button onclick="exibirDados()">Exibir</button>
+</body>
+</html>
