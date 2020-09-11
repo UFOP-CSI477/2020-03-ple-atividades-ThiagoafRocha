@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <script>
+        function Pessoa (nome, datanasc, tel, email){
+            this.nome = nome;
+            this.datanasc = datanasc;
+            this.tel = tel;
+            this.email = email;
+        }
+
+        function carregarDados(){
+            const nome = document.formDados.nome.value;
+            const datanasc = document.formDados.datanasc.value;
+            const tel = document.formDados.tel.value;
+            const email = document.formDados.email.value;
+
+            const pessoa = new Pessoa(nome, datanasc, tel, email);
+
+            window.alert(`Dados carregados com sucesso: ${pessoa.nome} ${pessoa.datanasc} ${pessoa.tel} ${pessoa.email}`)
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form name="formDados" action="post" method="POST">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Nome completo</label>
+              <input type="text" name="nome" class="form-control" id="formGroupExampleInput" placeholder="Insira o nome completo">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Data de nascimento</label>
+                <input type="date" name="datanasc" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Número de telefone</label>
+                <input type="tel" name="tel" class="form-control" id="formGroupExampleInput2" placeholder="Insira número de telefone">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">E-mail</label>
+                <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Insira seu e-mail">
+            </div>
+          </form>
+          <button onclick="carregarDados()" class="btn btn-primary mb-3">Cadastrar</button>
+    </div>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
