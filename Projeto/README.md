@@ -30,8 +30,8 @@
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
+  Protótipos para as páginas de Login, Página principal e Página da Disciplina foram elaborados, e podem ser encontrados em, a partir deste diretório, na pasta protótipo. Alí se tem uma ideia geral com os elementos básicos que cada página deve ter.
 
 ### 5. Referências
 
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
+  MOODLE. Disponível em: <https://docs.moodle.org/39/en/About_Moodle>. Acessado em: 10 de Setembro de 2020.
