@@ -31,6 +31,7 @@
 ### 4. Protótipo
 
   Protótipos para as páginas de Login, Página principal e Página da Disciplina foram elaborados, e podem ser encontrados em, a partir deste diretório, na pasta protótipo. Alí se tem uma ideia geral com os elementos básicos que cada página deve ter.
+  Via link: https://github.com/UFOP-CSI477/2020-03-ple-atividades-ThiagoafRocha/tree/master/Projeto/prototipo
 
 ### 5. Referências
 
