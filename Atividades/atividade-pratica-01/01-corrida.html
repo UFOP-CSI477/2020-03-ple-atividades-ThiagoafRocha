@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/01-corrida.css">
+    <script src="js/01-corrida.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="form-largada" name="formComp">
+            <div id="bg-titulo-largada">
+                <h1 id="titulo-largada">Linha de Largada</h1>
+            </div>
+            <div class="row">
+                <div class="col-3 primeira-col partida">
+                    <h2>Pole-position</h2>
+                    <label for="comp1n">Nome:</label>
+                    <input type="text" name="comp1n" id="comp1n">
+                    <label for="comp1t">Tempo:</label>
+                    <input type="text" name="comp1t" id="comp1t">
+                </div>
+                <div class="col-4"></div>
+                <div class="col-3 segunda-col partida">
+                    <h2>2º colocado</h2>
+                    <label for="comp2n">Nome:</label>
+                    <input type="text" name="comp2n" id="comp2n">
+                    <label for="comp2t">Tempo:</label>
+                    <input type="text" name="comp2t" id="comp2t">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 primeira-col partida">
+                    <h2>3º colocado</h2>
+                    <label for="comp3n">Nome:</label>
+                    <input type="text" name="comp3n" id="comp3n">
+                    <label for="comp3t">Tempo:</label>
+                    <input type="text" name="comp3t" id="comp3t">
+                </div>
+                <div class="col-4"></div>
+                <div class="col-3 segunda-col partida">
+                    <h2>4º colocado </h2>
+                    <label for="comp4n">Nome:</label>
+                    <input type="text" name="comp4n" id="comp4n">
+                    <label for="comp4t">Tempo:</label>
+                    <input type="text" name="comp4t" id="comp4t">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 primeira-col partida">
+                    <h2>5º colocado</h2>
+                    <label for="comp5n">Nome:</label>
+                    <input type="text" name="comp5n" id="comp5n">
+                    <label for="comp5t">Tempo:</label>
+                    <input type="text" name="comp5t" id="comp5t">
+                </div>
+                <div class="col-4"></div>
+                <div class="col-3 segunda-col partida">
+                    <h2>6º colocado</h2>
+                    <label for="comp6n">Nome:</label>
+                    <input type="text" name="comp6n" id="comp6n">
+                    <label for="comp6t">Tempo:</label>
+                    <input type="text" name="comp6t" id="comp6t">
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"> <button class="btn btn-success" id="botao-correr" onclick="resultado()">Correr!</button>
+            </div>
+            <div class="col"></div>
+        </div>
+
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Largada</th>
+                    <th scope="col">Competidor</th>
+                    <th scope="col">Tempo (s)</th>
+                    <th scope="col">Resultado</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+        </d>
+</body>
+
+</html>

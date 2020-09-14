@@ -1,0 +1,36 @@
+.botao-numerico{
+    padding: 1.5em;
+}
+
+.botao-op{
+    padding: 1.3em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+#div-calculadora{
+    padding: 5em 0em;
+}
+
+#resultado{
+    background-color: green;
+    color: white;
+    padding: 3em;
+    border-radius: 2em 2em 0em 0em;
+    margin-right: 5.7em;
+    text-align: right;
+}
+
+#primeira-col{
+    margin-left: 1em;
+    margin-right: -2.5em;
+}
+
+#terceira-col{
+    margin-left: -2.3em;
+    padding-right: 6em;
+}
+
+.botao-res{
+    padding: 1em 1.3em;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/02-imc.css">
+    <script src="js/02-imc.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="titulo-pagina">Calcule seu IMC</h1>
+        <div class="row">
+            <div class="col-6" id="div-resultado">
+                <div id="resultado"></div>
+                <div id="mensagem"></div>
+            </div>
+            <div class="col-6">
+                <div id="peso-ideal"></div>
+            </div>
+        </div>
+        <form action="" name="formImc" id="formImc">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="altura">Digite a altura do paciente (em metros): </label>
+                    <input type="text" name="altura" class="form-control" id="altura">
+                </div>
+                <div class="form-group col-md-6" id="div-peso">
+                    <label for="peso">Digite o peso do paciente (em quilogramas): </label>
+                    <input type="text" name="peso" class="form-control" id="peso">
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col" id="div-botao"><button class="btn btn-primary" onclick="calculo()">Calcular</button></div>
+        </div>   
+    </div>
+</body>
+
+</html>

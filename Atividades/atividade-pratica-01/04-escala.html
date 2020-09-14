@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/04-escala.css">
+    <script src="js/04-escala.js"></script>
+</head>
+
+<body>
+    <h1 id="titulo-pagina">Escala Richter</h1>
+    <div class="container">
+        <div id="div-resposta">
+        <div id="resultado"></div>
+        <div id="mensagem"></div>
+    </div>
+        <form action="" name="formEscala" id="formEscala">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="amp">Digite a Amplitude (em milímetros): </label>
+                    <input type="text" name="amp" class="form-control" id="amp">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="tempo">Digite o intervalo de tempo (em segundos): </label>
+                    <input type="text" name="tempo" class="form-control" id="tempo">
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col" id="div-botao"><button class="btn btn-primary" onclick="calculoEscala()">Calcular</button></div>
+        </div>  
+    </div>
+</body>
+
+</html>

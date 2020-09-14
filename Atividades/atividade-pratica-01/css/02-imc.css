@@ -1,0 +1,28 @@
+#titulo-pagina{
+    text-align: center;
+    padding: 1em;
+}
+
+#div-resultado{
+    background-color: darkgrey;
+    padding: 3em;
+    text-align: center;
+    border-radius: 3em;
+}
+
+#peso-ideal{
+    background-color: darkgreen;
+    padding: 3em;
+    text-align: center;
+    border-radius: 3em;
+    color: #FFF;
+}
+
+#formImc{
+    margin: 1em;
+    padding: 1em;
+}
+
+#div-botao{
+    padding-left: 3em;
+}
