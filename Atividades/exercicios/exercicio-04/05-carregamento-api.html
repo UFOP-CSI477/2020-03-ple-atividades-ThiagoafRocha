@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carregamento API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body onload="carregarRegioes()">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <form action="">
+                    <div style="padding: 1em;">
+                        <h2>Escolha a região:</h2>
+                        <select class="custom-select mr-sm-2" name="regioes" id="regioes" onchange="carregarEstados()">
+                            <option value="">Selecione: </option>
+                        </select>
+                    </div>
+                    <div style="padding: 1em;">
+                        <h2>Escolha o estado:</h2>
+                        <select class="custom-select mr-sm-2" name="estados" id="estados" onchange="carregarCidades()">
+                            <option value="">Seleciona: </option>
+                        </select>
+                    </div>
+                    <div style="padding: 1em;">
+                        <h2>Escolha a cidade:</h2>
+                        <select class="custom-select mr-sm-2" name="cidades" id="cidades">
+                            <option value="">Seleciona: </option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <script src="js/carregamento-api.js"></script>
+</body>
+
+</html>
