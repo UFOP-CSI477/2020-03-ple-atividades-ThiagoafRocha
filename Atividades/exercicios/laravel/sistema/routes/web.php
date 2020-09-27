@@ -13,6 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Models\Produto;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/ola', function() {
+    return 'Olá, mundo!';
+});
+
+Route::get('/produtos/todos', function() {
+
+    $produtos = Produto::all();
+
+    return view('listaProdutos', [ 'dados' => $produtos ]);
+});
+
+Route::get('/produtos/{id}', function($id) {
+
+    $produto = Produto::find($id);
+
+    if (!$produto)
+        return 'Id inválido!';
+    
+    return view('listaProdutos', ['dados' => $produto]);
 });
