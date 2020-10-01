@@ -20,6 +20,14 @@
                 <li class="nav-item"><a href="{{ route('produtos.index') }}" class="nav-link">Produtos</a></li>
             </ul>
         </nav>
+
+        @if (session('mensagem'))
+
+            <div class="alert alert-success">
+                {{ session('mensagem') }}
+            </div>
+            
+        @endif
     @yield('conteudo')
         
     </div>
