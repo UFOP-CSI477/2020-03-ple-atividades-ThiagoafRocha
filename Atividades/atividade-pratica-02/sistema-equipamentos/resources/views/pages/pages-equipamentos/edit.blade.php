@@ -8,7 +8,7 @@
 
 <h1 class="titulo-principal">Formulário</h1>
 
-<form action=" {{ route('equipamentos.update', $equipamento->id) }}" method="post">
+<form action=" {{ route('equipamentos.update', $equipamento->id) }}" method="post" onsubmit="return validaEquip()">
     @csrf
     @method('PUT')
     <div class="form-group">

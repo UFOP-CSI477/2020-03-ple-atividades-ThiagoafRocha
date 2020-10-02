@@ -6,7 +6,7 @@
 
 @section('conteudo')
 <h1 class="titulo-principal">Formulário Manutenção</h1>
-<form action=" {{ route('registros.store') }}" method="post">
+<form action=" {{ route('registros.store') }}" method="post" onsubmit="validaReg()">
     @csrf
     <div class="form-group">
         <label for="equipamento_id">Equipamento:</label>
