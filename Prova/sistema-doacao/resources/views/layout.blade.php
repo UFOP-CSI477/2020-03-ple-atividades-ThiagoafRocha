@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-tem active">
-                        <a href="#" class="nav-link">Área Geral</a>
+                        <a href="{{ route('area-geral.index') }}" class="nav-link">Área Geral</a>
                     </li>
                     <li class="nav-tem active">
                         <a href="#" class="nav-link">Área Administrativa</a>
