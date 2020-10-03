@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pessoa;
 use Illuminate\Http\Request;
 
-class PessoaController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class PessoaController extends Controller
      */
     public function index()
     {
-        $pessoas = Pessoa::get();
-        return view('pages.pages-pessoas.index', ['pessoas' => $pessoas]);
+        return view('pages.admin');
     }
 
     /**
@@ -42,10 +40,10 @@ class PessoaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Pessoa  $pessoa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Pessoa $pessoa)
+    public function show($id)
     {
         //
     }
@@ -53,10 +51,10 @@ class PessoaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Pessoa  $pessoa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pessoa $pessoa)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +63,10 @@ class PessoaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Pessoa  $pessoa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pessoa $pessoa)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +74,10 @@ class PessoaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Pessoa  $pessoa
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pessoa $pessoa)
+    public function destroy($id)
     {
         //
     }

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Agendamento;
+use App\Models\Coleta;
+use App\Models\Pessoa;
 use Illuminate\Http\Request;
 
 class AgendamentoController extends Controller
@@ -14,7 +16,8 @@ class AgendamentoController extends Controller
      */
     public function index()
     {
-        //
+        $agendamentos = Agendamento::get();
+        return view('pages.pages-agendamentos.index', ['agendamentos' => $agendamentos]);
     }
 
     /**
@@ -24,7 +27,9 @@ class AgendamentoController extends Controller
      */
     public function create()
     {
-        //
+        $pessoas = Pessoa::get();
+        $coletas = Coleta::get();
+        return view('pages.pages-agendamentos.create', ['pessoas' => $pessoas, 'coletas' => $coletas]);
     }
 
     /**
@@ -35,7 +40,9 @@ class AgendamentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Agendamento::create($request->all());
+        session()->flash('mensagem', 'Agendamento criado com sucesso!');
+        return redirect()->route('agendamentos.index');
     }
 
     /**
@@ -57,7 +64,9 @@ class AgendamentoController extends Controller
      */
     public function edit(Agendamento $agendamento)
     {
-        //
+        $pessoas = Pessoa::get();
+        $coletas = Coleta::get();
+        return view('pages.pages-agendamentos.edit', ['agendamento' => $agendamento, 'pessoas' => $pessoas, 'coletas' => $coletas]);
     }
 
     /**
@@ -69,7 +78,10 @@ class AgendamentoController extends Controller
      */
     public function update(Request $request, Agendamento $agendamento)
     {
-        //
+        $agendamento->fill($request->all());
+        $agendamento->save();
+        session()->flash('mensagem', 'Agendamento alterado com sucesso!');
+        return redirect()->route('agendamentos.index');
     }
 
     /**
@@ -80,6 +92,8 @@ class AgendamentoController extends Controller
      */
     public function destroy(Agendamento $agendamento)
     {
-        //
+        $agendamento->delete();
+        session()->flash('mensagem', 'Agendamento excluído com sucesso!');
+        return redirect()->route('agendamentos.index');
     }
 }

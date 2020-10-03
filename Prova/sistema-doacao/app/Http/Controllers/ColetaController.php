@@ -14,7 +14,8 @@ class ColetaController extends Controller
      */
     public function index()
     {
-        //
+        $coletas = Coleta::orderBy('nome')->get();
+        return view('pages.pages-coletas.index', ['coletas' => $coletas]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ColetaController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.pages-coletas.create');
     }
 
     /**
@@ -35,7 +36,9 @@ class ColetaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Coleta::create($request->all());
+        session()->flash('mensagem', 'Local cadastrado com sucesso!');
+        return redirect()->route('area-admin.index');
     }
 
     /**

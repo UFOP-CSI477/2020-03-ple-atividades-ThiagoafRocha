@@ -9,6 +9,7 @@ class Agendamento extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['pessoa_id', 'coleta_id', 'data'];
 
     public function pessoa(){
         return $this->belongsTo(Pessoa::class);
