@@ -4,10 +4,14 @@
     Locais de Doação - Doe Sangue!
 @endsection
 
+@section('titulo')
+<h1>Lista de Locais de Doação</h1>
+@endsection
+
 @section('conteudo')
-    <h1>Lista de Locais de Doação</h1>
-    <table>
-        <thead>
+    <h2 class="titulo-table-geral"> Locais de Doação</h2>
+    <table class="table table-hover" style="background-color: #FFF">
+        <thead class="thead-dark">
             <tr>
                 <th>Local</th>
                 <th>Cidade</th>

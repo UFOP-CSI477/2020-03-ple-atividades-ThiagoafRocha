@@ -4,13 +4,16 @@
     Área Geral - Doe Sangue!
 @endsection
 
+@section('titulo')
+<h1>Área Geral</h1>
+@endsection
+
 @section('conteudo')
-    <h1>Área Geral</h1>
-    <h2>Ordenado por nome</h2>
-    <table>
-        <thead>
+    <h2 class="titulo-table-geral">Ordenado por nome</h2>
+    <table class="table table-hover" style="background-color: #FFF">
+        <thead class="thead-dark">
             <tr>
-                <th>Id - Doador</th>
+                <th>Id</th>
                 <th>Doador</th>
                 <th>Data</th>
                 <th>Nome do Local</th>
@@ -31,9 +34,9 @@
             @endforeach
         </tbody>
     </table>
-    <h2>Ordenado por Data</h2>
-    <table>
-        <thead>
+    <h2 class="titulo-table-geral">Ordenado por Data</h2>
+    <table class="table table-hover" style="background-color: #FFF">
+        <thead class="thead-dark">
             <tr>
                 <th>Data</th>
                 <th>Nome do Local</th>

@@ -4,16 +4,21 @@
     Agendamentos - Doe Sangue!
 @endsection
 
+@section('titulo')
+<h1>Agendamentos de Doações</h1>
+@endsection
+
 @section('conteudo')
-    <h1>Agendamentos de Doações</h1>
-    <table>
-        <thead>
+    <h2 class="titulo-table-geral">Agendamentos</h2>
+    <table class="table table-hover" style="background-color: #FFF">
+        <thead class="thead-dark">
             <tr>
                 <th>Agendamento</th>
                 <th>Pessoa</th>
                 <th>Local</th>
                 <th>Cidade</th>
                 <th>Data</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>

@@ -1,0 +1,111 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 1em;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: rgb(202, 2, 2);
+}
+
+body{
+    background-color: rgba(236, 236, 182, 0.37);
+}
+
+
+#nav-menu{
+    background-color: #FFF;
+    float: left;
+    position: relative;
+    top: 2em;
+    left: 1.5em;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#nav-link-1{
+    background-image: url(/img/link-img.png);
+    width: 235px;
+    height: 155px;
+    border-radius: 1em;
+    background-size: 250px;
+    background-repeat: no-repeat;
+    margin-bottom: 0.5em;
+}
+
+#nav-link-2{
+    background-image: url(/img/link-img2.jpg);
+    width: 235px;
+    height: 155px;
+    border-radius: 1em;
+    background-size: 250px;
+    background-repeat: no-repeat;
+}
+
+#conteudo-principal-1{
+    background-image: url(/img/bg.png);
+    border: 2px solid grey;
+    border-radius: 1em;
+    width: 900px;
+    height: 400px;
+    background-size: 930px;
+    background-repeat: no-repeat;
+    margin-left: 5em;
+    margin-top: 1em;
+}
+
+#conteudo-principal-2{
+    background-color: rgba(231, 9, 9, 0.685);
+    background-image: url(/img/compatibilidade.jpg);
+    border: 2px solid grey;
+    border-radius: 1em;
+    width: 900px;
+    height: 400px;
+    background-size: 650px 400px;
+    background-repeat: no-repeat;
+    margin-left: 9.8em;
+    margin-top: 1em;
+}
+
+#principal-p-1{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 0.5em;
+}
+
+#principal-p-2{
+    text-align: justify;
+    position: relative;
+    top: 8em;
+    right: 2em;
+    margin-left: 40em;
+    font-size: large;
+    color: #FFF;
+}
+
+.titulo-table-geral{
+    background-color:rgba(202, 2, 2, 0.712);
+    color: #FFF;
+    border-radius: 2em 2em 0 0;
+    text-align: center;
+    width: 20em;
+    padding: 0.2em;
+    margin-bottom: -0.01em;
+    margin-top: 1em;
+}
+
+.botoes-admin{
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+.cad-form{
+    border: 1px solid black; 
+    border-radius: 1em; 
+    padding: 1em;
+    margin-top: 1em;
+}

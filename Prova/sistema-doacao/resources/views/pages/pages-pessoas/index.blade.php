@@ -4,10 +4,14 @@
     Lista de Pessoas - Doe Sangue!
 @endsection
 
+@section('titulo')
+<h1>Lista de Pessoas Cadastradas</h1>
+@endsection
+
 @section('conteudo')
-    <h1>Lista de Pessoas Cadastradas</h1>
-    <table>
-        <thead>
+    <h2 class="titulo-table-geral">Lista de Doadores</h2>
+    <table class="table table-hover" style="background-color: #FFF">
+        <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
