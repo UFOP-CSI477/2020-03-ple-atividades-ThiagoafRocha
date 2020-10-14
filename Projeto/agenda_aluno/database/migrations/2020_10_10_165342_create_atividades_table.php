@@ -22,7 +22,7 @@ class CreateAtividadesTable extends Migration
             $table->integer('nota');
             $table->timestamps();
 
-            $table->foreign('materia_id')->references('id')->on('materia');
+            $table->foreign('materia_id')->references('id')->on('materias');
         });
     }
 
