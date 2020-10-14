@@ -15,11 +15,14 @@ class CreateAtividadesTable extends Migration
     {
         Schema::create('atividades', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('materia_id');
             $table->integer('tipo');
             $table->string('descricao', 50);
             $table->date('data_entrega');
             $table->integer('nota');
             $table->timestamps();
+
+            $table->foreign('materia_id')->references('id')->on('materia');
         });
     }
 

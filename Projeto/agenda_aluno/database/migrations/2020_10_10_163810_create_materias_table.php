@@ -17,13 +17,11 @@ class CreateMateriasTable extends Migration
             $table->id();
             $table->string('codigo', 6);
             $table->string('nome', 20);
-            $table->unsignedBigInteger('atividade_id')->nullable();
-            //$table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->integer('faltas');
             $table->timestamps();
 
-            $table->foreign('atividade_id')->references('id')->on('atividades');
-            //$table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
