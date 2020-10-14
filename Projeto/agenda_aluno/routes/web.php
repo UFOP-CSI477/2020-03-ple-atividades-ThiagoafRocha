@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AtividadeController;
+use App\Http\Controllers\MateriaController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.principal');
+})->name('principal');
+
+Route::resource("materias", MateriaController::class)->middleware('auth');
+Route::resource("atividades", AtividadeController::class)->middleware('auth');
 
 Auth::routes();
 

@@ -22,7 +22,10 @@ class AtividadeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'tipo' => $this->faker->randomElement(array(1, 2, 3)),
+            'descricao' => $this->faker->sentence(7, true),
+            'data_entrega' => $this->faker->date(),
+            'nota' => $this->faker->randomDigit,
         ];
     }
 }

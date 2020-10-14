@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Atividade;
+use App\Models\Materia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AtividadeController extends Controller
 {
@@ -14,7 +16,8 @@ class AtividadeController extends Controller
      */
     public function index()
     {
-        //
+       $atividades = Atividade::get(); 
+        return view('pages.atividades.index', ['atividades' => $atividades]);
     }
 
     /**
@@ -24,7 +27,7 @@ class AtividadeController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.atividades.create');
     }
 
     /**
@@ -35,7 +38,8 @@ class AtividadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Atividade::create($request->all());
+        return redirect()->route('atividades.index');
     }
 
     /**
@@ -57,7 +61,7 @@ class AtividadeController extends Controller
      */
     public function edit(Atividade $atividade)
     {
-        //
+        return view("pages.atividades.edit", ['atividade' => $atividade]);
     }
 
     /**
@@ -69,7 +73,10 @@ class AtividadeController extends Controller
      */
     public function update(Request $request, Atividade $atividade)
     {
-        //
+        $atividade->fill($request->all());
+        $atividade->save();
+        session()->flash('mensagem', '');
+        return redirect()->route('atividades.index');
     }
 
     /**
@@ -80,6 +87,8 @@ class AtividadeController extends Controller
      */
     public function destroy(Atividade $atividade)
     {
-        //
+        $atividade->delete();
+
+        return redirect()->route('atividades.index');
     }
 }
