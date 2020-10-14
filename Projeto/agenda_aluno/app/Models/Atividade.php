@@ -9,6 +9,10 @@ class Atividade extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['tipo', 'descricao', 'data_entrega', 'nota'];
+    protected $fillable = ['materia_id', 'tipo', 'descricao', 'data_entrega', 'nota'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
 }

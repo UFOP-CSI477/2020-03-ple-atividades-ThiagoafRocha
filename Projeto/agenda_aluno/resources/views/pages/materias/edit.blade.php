@@ -14,8 +14,16 @@
         <label for="nome">Nome:</label>
         <input class="form-control" type="text" name="nome" id="nome" value="{{ $materia->nome }}">
         <label for="faltas">Faltas:</label>
-        <input class="form-control" type="text" name="faltas" id="faltas" value="{{ $materia->faltas }}">
+        <input class="form-control" type="number" name="faltas" id="faltas" value="{{ $materia->faltas }}">
 
         <input type="submit" value="Alterar" class="btn btn-primary" style="margin-top: 1em">
     </form>
+
+    <div id="botao-detalhes">
+        <form action="{{ route('materias.destroy', $materia->id) }}" method="POST">
+            @csrf
+            @method("DELETE")
+            <input type="submit" value="Excluir" class="btn btn-danger" style="width: 20%">
+        </form>
+    </div>
 @endsection

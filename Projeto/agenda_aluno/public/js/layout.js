@@ -1,5 +1,6 @@
 function verificaFaltas(){
     let faltas = document.getElementById('nfaltas').innerHTML;
+    console.log('cheguei aqui');
 
     if(faltas < 12){
         document.getElementById('detalhes').style.backgroundColor = "green";

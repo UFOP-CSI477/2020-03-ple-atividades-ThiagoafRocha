@@ -9,13 +9,13 @@ class Materia extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['codigo', 'nome', 'atividade_id', 'faltas'];
+    protected $fillable = ['codigo', 'nome', 'user_id', 'faltas'];
 
-    public function exercicios(){
-        return $this->hasMany(Atividade::class);
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 
-    //public function users(){
-    //    return $this->hasMany(User::class);
-    //}
+    public function atividades(){
+        return $this->hasMany(Atividade::class);
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Atividade;
 use App\Models\Materia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AtividadeController extends Controller
@@ -16,7 +17,8 @@ class AtividadeController extends Controller
      */
     public function index()
     {
-       $atividades = Atividade::get(); 
+
+        $atividades = Atividade::get(); 
         return view('pages.atividades.index', ['atividades' => $atividades]);
     }
 
@@ -27,7 +29,8 @@ class AtividadeController extends Controller
      */
     public function create()
     {
-        return view('pages.atividades.create');
+        $materias = Materia::get();
+        return view('pages.atividades.create', ['materias' => $materias]);
     }
 
     /**
@@ -39,7 +42,7 @@ class AtividadeController extends Controller
     public function store(Request $request)
     {
         Atividade::create($request->all());
-        return redirect()->route('atividades.index');
+        return redirect()->route('materias.index');
     }
 
     /**
@@ -76,7 +79,7 @@ class AtividadeController extends Controller
         $atividade->fill($request->all());
         $atividade->save();
         session()->flash('mensagem', '');
-        return redirect()->route('atividades.index');
+        return redirect()->route('materias.index');
     }
 
     /**
@@ -89,6 +92,6 @@ class AtividadeController extends Controller
     {
         $atividade->delete();
 
-        return redirect()->route('atividades.index');
+        return redirect()->route('materias.index');
     }
 }

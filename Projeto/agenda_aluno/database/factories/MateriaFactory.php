@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Atividade;
 use App\Models\Materia;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class MateriaFactory extends Factory
@@ -25,7 +26,7 @@ class MateriaFactory extends Factory
         return [
             'codigo' => $this->faker->numerify('CSI###'),
             'nome' => $this->faker->word,
-            'atividade_id' => Atividade::factory(),
+            'user_id' => User::factory(),
             'faltas' => $this->faker->randomDigit
         ];
     }

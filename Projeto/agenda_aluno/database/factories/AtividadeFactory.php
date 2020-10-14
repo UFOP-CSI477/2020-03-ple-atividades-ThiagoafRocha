@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Atividade;
+use App\Models\Materia;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AtividadeFactory extends Factory
@@ -22,6 +23,7 @@ class AtividadeFactory extends Factory
     public function definition()
     {
         return [
+            'materia_id' => Materia::factory(),
             'tipo' => $this->faker->randomElement(array(1, 2, 3)),
             'descricao' => $this->faker->sentence(7, true),
             'data_entrega' => $this->faker->date(),

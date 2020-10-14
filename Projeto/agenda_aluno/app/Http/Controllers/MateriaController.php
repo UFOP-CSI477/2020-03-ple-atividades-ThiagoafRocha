@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Atividade;
 use App\Models\Materia;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class MateriaController extends Controller
@@ -15,8 +18,9 @@ class MateriaController extends Controller
      */
     public function index()
     {
+        $user = Auth::user()->id;
         $materias = Materia::get();
-        return view('pages.materias.index', ['materias' => $materias]);
+        return view('pages.materias.index', ['materias' => $materias, 'user' => $user]);
     }
 
     /**
@@ -26,7 +30,8 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        return view('pages.materias.create');
+        $users = User::get();
+        return view('pages.materias.create', ['users' => $users]);
     }
 
     /**
@@ -49,11 +54,7 @@ class MateriaController extends Controller
      */
     public function show(Materia $materia)
     {
-        $atividades = DB::table('atividades')
-            ->join('materias', 'atividades.id', '=' , 'materias.atividade_id')
-            ->select('atividades.*')
-            ->where('atividades.id', '=', 'materias.atividades_id')
-            ->get();
+        $atividades = Atividade::get();
         return view('pages.materias.show', ['materia' => $materia, 'atividades' => $atividades]);
     }
 
